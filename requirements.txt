@@ -1,0 +1,10 @@
+python>=3.9
+pandas
+numpy
+scipy
+statsmodels
+matplotlib
+openpyxl
+nbformat
+nbclient
+pysam        # only for 04_read_level_evidence/igv (plotting and counting reads in BAM slices)

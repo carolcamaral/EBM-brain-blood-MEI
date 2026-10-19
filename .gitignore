@@ -1,0 +1,12 @@
+# individual-level genomic data and patient information are not shared in this repository
+data/*
+!data/README.md
+*.vcf
+*.vcf.gz
+*.bam
+*.bai
+*.xlsx
+outputs/
+figs/
+__pycache__/
+.ipynb_checkpoints/

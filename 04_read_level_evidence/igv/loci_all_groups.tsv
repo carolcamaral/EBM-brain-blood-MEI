@@ -1,0 +1,11 @@
+panel	category	family	subject	group	chrom	pos	bams	note
+A	shared germline (reference)	Alu	1501	HC	chr1	19216242	15_01B,15_01T	0/1 in both tissues; what a real germline het looks like
+B	brain-only, recurrent	Alu	1501	HC	chr4	179335815	15_01B,15_01T,15_11B	0/0 blood, 0/1 brain; carried by 22 other people (15_11_B = 1/1 carrier)
+C	brain-only, recurrent	Alu	1613	AD	chr13	89898321	16_13B,16_13T,16_03B	0/0 blood, 0/1 brain; 16_03_B = 1/1 carrier
+D	brain-only, recurrent	LINE-1	1501	HC	chr7	108188819	15_01B,15_01T,15_28B	full-length L1Ta; 15_28_B = 1/1 carrier
+E	brain-only, 7202 (also in PD109/PD348)	Alu	7202	MND	chr13	87217371	A072_02B,A072_02M,PD109_C,PD109_FC,PD348_C	not in 7202 blood, but called in both PD109 and PD348 samples
+F	brain-only, 7202 (also in PD109)	LINE-1	7202	MND	chr8	117271553	A072_02B,A072_02M,PD109_C,PD109_FC	same pattern for LINE-1
+G	brain-only, private	Alu	1528	HC	chr17	26970353	15_28B,15_28T	not in any other sample; ASSESS 3
+H	brain-only, private	SVA	1511	AD	chr22	12519767	15_11B,15_11T	not in any other sample; ASSESS 4
+I	brain-only, private	LINE-1	4011	MND	chr20	29125080	4011_B,4011_M	not in any other sample; ASSESS 4
+J	blood-only (background)	Alu	926	HC	chr3	66105351	09_26B,09_26T	0/1 blood, 0/0 brain

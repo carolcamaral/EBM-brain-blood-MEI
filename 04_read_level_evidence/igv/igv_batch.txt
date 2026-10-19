@@ -1,0 +1,100 @@
+# IGV batch script. 1) Unzip igv_slices.tar.gz  2) Replace SLICES with the full path of the igv_slices folder
+#   (e.g. sed -i '' 's#SLICES#/Users/carol/Downloads/igv_slices#g' igv_batch.txt)  3) IGV > Tools > Run Batch Script
+genome hg38
+snapshotDirectory SLICES/snapshots
+maxPanelHeight 500
+preference SAM.SHOW_SOFT_CLIPPED TRUE
+preference SAM.DOWNSAMPLE_READS FALSE
+preference SAM.QUICK_CONSENSUS_MODE FALSE
+
+# Panel K: shared germline (reference) - Alu 236 (MND) - 0/1 in both tissues; what a real germline het looks like
+new
+load SLICES/K_0236_B_chr4_185823568.bam
+load SLICES/K_0236_M_chr4_185823568.bam
+goto chr4:185823418-185823718
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot K_Alu_236_chr4_185823568.png
+
+# Panel L: brain-only, recurrent - Alu 180 (MND) - 0/0 blood, 0/1 brain; 0561_B = 0/1 carrier (17 other people carry it)
+new
+load SLICES/L_0180B_chr15_36554729.bam
+load SLICES/L_0180M_chr15_36554729.bam
+load SLICES/L_0561_B_chr15_36554729.bam
+goto chr15:36554579-36554879
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot L_Alu_180_chr15_36554729.png
+
+# Panel M: brain-only, recurrent - LINE-1 236 (MND) - 0/0 blood, 0/1 brain; 0078B = 0/1 carrier (12 other people)
+new
+load SLICES/M_0236_B_chr6_13190801.bam
+load SLICES/M_0236_M_chr6_13190801.bam
+load SLICES/M_0078B_chr6_13190801.bam
+goto chr6:13190651-13190951
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot M_LINE-1_236_chr6_13190801.png
+
+# Panel N: brain-only in two people - SVA 180,561 (MND) - SVA brain-only in both 180 and 561; 0236_B = 0/1 carrier; an Alu is also called at this position
+new
+load SLICES/N_0180B_chr13_49599235.bam
+load SLICES/N_0180M_chr13_49599235.bam
+load SLICES/N_0561_B_chr13_49599235.bam
+load SLICES/N_0561_M_chr13_49599235.bam
+load SLICES/N_0236_B_chr13_49599235.bam
+goto chr13:49599085-49599385
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot N_SVA_180-561_chr13_49599235.png
+
+# Panel O: brain-only, private - Alu 78 (MND) - not in any other sample; ASSESS 5, TSD 14 bp
+new
+load SLICES/O_0078B_chr11_117132047.bam
+load SLICES/O_0078M_chr11_117132047.bam
+goto chr11:117131897-117132197
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot O_Alu_78_chr11_117132047.png
+
+# Panel P: blood-only (background) - Alu 78 (MND) - 0/1 blood, 0/0 brain; 17 other people carry it
+new
+load SLICES/P_0078B_chr11_32870512.bam
+load SLICES/P_0078M_chr11_32870512.bam
+goto chr11:32870362-32870662
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot P_Alu_78_chr11_32870512.png
+
+# Panel J: blood-only (background, blood only) - Alu 926 (HC) - already extracted; brain BAM (09_26_T) is 0 B on the Data Portal
+new
+load SLICES/J_09_26_B_chr3_66105351.bam
+goto chr3:66105201-66105501
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot J_Alu_926_chr3_66105351.png
+
+# Panel E: brain-only 7202 (PD109 only) - Alu 7202 (MND) - already extracted; 7202 BAMs not on the Data Portal
+new
+load SLICES/E_PD109_C_chr13_87217371.bam
+goto chr13:87217221-87217521
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot E_Alu_7202_chr13_87217371.png
+
+# Panel F: brain-only 7202 (PD109 only) - LINE-1 7202 (MND) - already extracted; 7202 BAMs not on the Data Portal
+new
+load SLICES/F_PD109_C_chr8_117271553.bam
+goto chr8:117271403-117271703
+sort base
+colorBy INSERT_SIZE
+expand
+snapshot F_LINE-1_7202_chr8_117271553.png

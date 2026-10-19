@@ -1,0 +1,10 @@
+panel	category	family	subject	group	chrom	pos	bams	note
+K	shared germline (reference)	Alu	236	MND	chr4	185823568	0236_B,0236_M	0/1 in both tissues; what a real germline het looks like
+L	brain-only, recurrent	Alu	180	MND	chr15	36554729	0180B,0180M,0561_B	0/0 blood, 0/1 brain; 0561_B = 0/1 carrier (17 other people carry it)
+M	brain-only, recurrent	LINE-1	236	MND	chr6	13190801	0236_B,0236_M,0078B	0/0 blood, 0/1 brain; 0078B = 0/1 carrier (12 other people)
+N	brain-only in two people	SVA	180,561	MND	chr13	49599235	0180B,0180M,0561_B,0561_M,0236_B	SVA brain-only in both 180 and 561; 0236_B = 0/1 carrier; an Alu is also called at this position
+O	brain-only, private	Alu	78	MND	chr11	117132047	0078B,0078M	not in any other sample; ASSESS 5, TSD 14 bp
+P	blood-only (background)	Alu	78	MND	chr11	32870512	0078B,0078M	0/1 blood, 0/0 brain; 17 other people carry it
+J	blood-only (background, blood only)	Alu	926	HC	chr3	66105351	09_26_B	already extracted; brain BAM (09_26_T) is 0 B on the Data Portal
+E	brain-only 7202 (PD109 only)	Alu	7202	MND	chr13	87217371	PD109_C	already extracted; 7202 BAMs not on the Data Portal
+F	brain-only 7202 (PD109 only)	LINE-1	7202	MND	chr8	117271553	PD109_C	already extracted; 7202 BAMs not on the Data Portal
